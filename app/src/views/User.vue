@@ -1,51 +1,48 @@
 <template>
-  <div id="user">
-    <div class="container">
-      <div class="left-container">
-        <h1>CHECK IN NOW.</h1>
+  <div id="barber">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="title-box">
+          <div class="title-box2">
+            <div class="title">SIGNUP NOW.</div>
+          </div>
+        </div>
       </div>
-      <div class="right-container">
-        <div class="form">
-          <h1>Signup</h1>
-          <form>
-            <div class="inputBox">
-               <table class="inpTable">
-                 <tr>
-                   <th><label for="f_name">First Name</label></th>
-                   <th><label for="l_name">Last Name</label></th>
-                 </tr>
-                 <tr>
-                   <td><input type="text" name="f_Name" id="f_name" class="inp"/></td>
-                   <td><input type="text" name="l_Name" id="l_name" class="inp"/></td>
-                 </tr>
-                  <tr>
-                    <th colspan="2"><label for="phone">Phone</label></th>
-                 </tr>
-                 <tr>
-                   <td colspan="2"><input type="phone" name="phone" id="phone" class="inp"/></td>
-                 </tr>
-                 <tr>
-                   <th colspan="2"><label for="email">Email</label></th>
-                 </tr>
-                 <tr>
-                   <td colspan="2"><input type="email" name="email" id="email" class="inp"/></td>
-                 </tr>
-                 <tr>
-                   <th><label for="password">Password</label></th>
-                   <th><label for="r_password">Repeat Password</label></th>
-                 </tr>
-                 <tr>
-                   <td>
-                     <input type="password" name="password" id="password" class="inp"/>
-                   </td>
-                   <td>
-                     <input type="password" name="r_password" id="r_password" class="inp"/>
-                   </td>
-                 </tr>
-               </table>
-             </div>
-            <button id="signupBut">Signup</button>
-          </form>
+      
+      <div class="col-md-6">
+        <div class="form-box">
+          <div  class="form-box2">
+            <div class="form-title">SINGUP.</div>
+            <form>
+              <div class="form-group">
+                <label for="f_name">FIRST NAME</label><br/>
+                <input type="text" name="f_Name" id="f_name" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="l_name">LAST NAME</label><br/>
+                <input type="text" name="l_Name" id="l_name" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label><br/>
+                <input type="phone" name="phone" id="phone" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label><br/>
+                <input type="email" name="email" id="email" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label><br/>
+                <input type="password" name="password" id="password" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="r_password">Repeat Password</label><br/>
+                <input type="password" name="r_password" id="r_password" class="form-input"/>
+              </div>
+            </form>
+            <div class="buttom-box">
+              <button class="form-buttom">SIGNUP</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

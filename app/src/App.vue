@@ -6,8 +6,7 @@
           Storm Walker co.
         </div>
         <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
+          <router-link to="/">Home</router-link> ||
           <router-link to ="/barber">Barber</router-link>
         </div>
       </div>
@@ -17,11 +16,16 @@
 </template>
 
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Montserrat");
+  @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
   #app {
+    font-family: 'Montserrat', sans-serif;
+/*
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+*/
+    color: #000000;
   }
 /* Header Style */
   header {
@@ -51,42 +55,68 @@
   }
 /* End Header Style */
 /* Form Style */
-  .container {
-    width: 100vw;
-    height: 100vh;
+  .row {
+    height:100vh;
   }
-  .left-container {
-    background-color: gray;
-    width: 50%;
+  .col-md-6 {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .title-box {
+    background-color:dimgray;
     height: 100%;
-    color: #FFFFFF;
-    float: left;
-    height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
   }
-  h1 {
-    border-bottom: 2px solid gray;
+  .title-box2 {
+    margin-top: auto;
+    margin-bottom: auto;
   }
-  .right-container {
-    background-color: lightgray;
-    width: 50%;
-    height: 100%;
-    float: right;
+  .title {
+    font-size: 5em;
+    color: #ffffff;
   }
-  .form {
-    background-color: #FFFFFF;
-    margin: 20% 20% 20% 20%;
+  .form-box {
+    background-color:lightgray;
+    padding:10% 15% 10% 15%;
+    height:100%;
+    justify-content: center;
+    display: flex;
   }
-  .inputBox {
-    text-align: left;
+  .form-box2{
+    background-color:#ffffff;
     width: 100%;
+    padding: 5%;
   }
-  .inp {
+  .form-title {
+    font-size: 3em;
+    margin-bottom: 7%;
+    border-bottom: 2px solid #000000;
+  }
+  .form-group {
+    margin-bottom: 5%;
+  }
+  label {
+    font-size: 1.8em;
+  }
+  .form-input {
+    width: 100%;
     border: none;
-    border-bottom: 2px solid gray;
-    width: 100%;
+    border-bottom: 2px solid #000000;
   }
-  th {
+  input[type="text"] {
     font-size: 1.5em;
   }
-/* End Form Style*/
+  .buttom-box {
+    text-align: center;
+  }
+  .form-buttom {
+    width: 200px;
+    font-size: 1.8em;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 2% 0 2% 0;
+  }
+/* End Form Style */
 </style>

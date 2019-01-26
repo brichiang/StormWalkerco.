@@ -1,41 +1,40 @@
 <template>
   <div id="barber">
-    <div class="container">
-      <div class="left-container">
-        <h1>BARBER SETUP.</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="title-box">
+          <div class="title-box2">
+            <div class="title">BARBER SETUP.</div>
+          </div>
+        </div>
       </div>
-      <div class="right-container">
-        <div class="form">
-          <h1>BERBER SETUP</h1>
-          <form>
-            <div class="inputBox">
-              <table class="inpTable">
-                <tr>
-                  <th><label for="f_name">FIRST NAME</label></th>
-                  <th><label for="l_name">LAST NAME</label></th>
-                </tr>
-                <tr>
-                  <td><input type="text" name="f_Name" id="f_name" class="inp"/></td>
-                  <td><input type="text" name="l_Name" id="l_name" class="inp"/></td>
-                </tr>
-                <tr>
-                  <th colspan="2"><label for="description">DESCRIPTION</label></th>
-                </tr>
-                <tr>
-                  <td colspan="2"><textarea name="description" id="description" class="inp"></textarea></td>
-                </tr>
-                <tr>
-                  <th><label for="image">PROFILE</label></th>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="file" name="image" id="image" accept="image/*" class="inp"/>
-                  </td>
-                </tr>
-              </table>
+      
+      <div class="col-md-6">
+        <div class="form-box">
+          <div  class="form-box2">
+            <div class="form-title">BERBER SETUP</div>
+            <form>
+              <div class="form-group">
+                <label for="f_name">FIRST NAME</label><br/>
+                <input type="text" name="f_Name" id="f_name" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="l_name">LAST NAME</label><br/>
+                <input type="text" name="l_Name" id="l_name" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="description">DESCRIPTION</label><br/>
+                <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="image">PROFILE</label><br/>
+                <input type="file" name="image" id="image" accept="image/*" />
+              </div>
+            </form>
+            <div class="buttom-box">
+              <button class="form-buttom">SETUP</button>
             </div>
-            <button id="submit">SETUP</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>

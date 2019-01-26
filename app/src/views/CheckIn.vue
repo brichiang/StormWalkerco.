@@ -1,51 +1,43 @@
 <template>
-  <div id="check-in">
-    <div class="container">
-      <div class="left-container">
-        <h1>CHECK IN NOW.</h1>
+  <div id="barber">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="title-box">
+          <div class="title-box2">
+            <div class="title">CHECK IN NOW.</div>
+          </div>
+        </div>
       </div>
-      <div class="right-container">
-        <div class="form">
-          <h1>CHECK IN</h1>
-          <form>
-            <div class="inputBox">
-              <table class="inpTable">
-                <tr>
-                  <th><label for="date">DATE</label></th>
-                </tr>
-                <tr>
-                  <td><input type="date" name="date" id="date" class="inp"/></td>
-                </tr>
-                <tr>
-                  <th><label for="time">TIME</label></th>
-                </tr>
-                <tr>
-                  <td><input type="time" name="time" id="time" class="inp"/></td>
-                </tr>
-                <tr>
-                  <th><label for="description" >DESCRIPTION</label></th>
-                </tr>
-                <tr>
-                  <td><textarea name="description" id="description" class="inp"></textarea></td>
-                </tr>
-                <tr>
-                  <th><label for="image">IMAGE</label></th>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="file" name="image" id="image" accept="image/*" class="inp"/>
-                  </td>
-                </tr>
-              </table>
+      
+      <div class="col-md-6">
+        <div class="form-box">
+          <div  class="form-box2">
+            <div class="form-title">CHECK IN</div>
+            <form>
+              <div class="form-group">
+                <label for="date">DATE</label>
+                <br/>
+                <input type="date" name="date" id="date" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="time">TIME</label><br/>
+                <input type="time" name="time" id="time" class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="description">DESCRIPTION</label><br/>
+                <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="image">PROFILE</label><br/>
+                <input type="file" name="image" id="image" accept="image/*" />
+              </div>
+            </form>
+            <div class="buttom-box">
+              <button class="form-buttom">CHECK IN</button>
             </div>
-            <button id="submit">CHECK IN</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style>
-  
-</style>
