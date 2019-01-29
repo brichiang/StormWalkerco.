@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <div class="title-box">
           <div class="title-box2">
-            <div class="title">CHECK IN NOW.</div>
+            <div class="title">CHECK IN <strong>NOW.</strong></div>
           </div>
         </div>
       </div>

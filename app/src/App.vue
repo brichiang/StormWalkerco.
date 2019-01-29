@@ -3,10 +3,12 @@
     <header>
       <div id="container">
         <div id="logo">
-          Storm Walker co.
+          <router-link to="/">
+            Storm Walker co.
+          </router-link>
         </div>
         <div id="nav">
-          <router-link to="/">Home</router-link> ||
+          <router-link to="/">Home</router-link> |
           <router-link to ="/barber">Barber</router-link>
         </div>
       </div>
@@ -55,9 +57,6 @@
   }
 /* End Header Style */
 /* Form Style */
-  .row {
-    height:100vh;
-  }
   .col-md-6 {
     padding-left: 0%;
     padding-right: 0%;
@@ -65,13 +64,13 @@
   .title-box {
     background-color:dimgray;
     height: 100%;
-    text-align: center;
     justify-content: center;
     display: flex;
   }
   .title-box2 {
     margin-top: auto;
     margin-bottom: auto;
+    width: 70%;
   }
   .title {
     font-size: 5em;
@@ -119,4 +118,44 @@
     padding: 2% 0 2% 0;
   }
 /* End Form Style */
+/* Home Style */
+  #home-box1 {
+    background-color: rgba(0,0,0,.5);
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+  }
+  #box{
+    width: 50%;
+    padding: 10% 0 30% 0;
+  }
+  .button {
+    width: 200px;
+    margin: 40px 60px 20px 0;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    color: #000;
+    float: left;
+    text-align: center;
+  }
+  #home-box2 {
+    justify-content: center;
+    display: flex;
+    padding: 20% 0 20% 0;
+  }
+  #image-box {
+    padding: 20px;
+  }
+  #home-text-box {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+  }
+  #home-text-box2 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+/* End Home Style */
 </style>

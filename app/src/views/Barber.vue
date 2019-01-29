@@ -12,7 +12,7 @@
       <div class="col-md-6">
         <div class="form-box">
           <div  class="form-box2">
-            <div class="form-title">BERBER SETUP</div>
+            <div class="form-title">BARBER SETUP</div>
             <form>
               <div class="form-group">
                 <label for="f_name">FIRST NAME</label><br/>
