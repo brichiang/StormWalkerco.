@@ -38,6 +38,7 @@
   #container {
     width: 100%;
     display: inline-block;
+    text-align: center;
   }
   #logo {
     color: #000000;
@@ -46,7 +47,6 @@
 
   #nav {
     padding: 30px;
-    text-align: right;
   }
 
   #nav a {
@@ -187,4 +187,19 @@
     margin: 2px;
   }
 /*End Contact Style*/
+/*Services Style*/
+  .service-box {
+    margin-bottom: 10%;
+  }
+  .info-box {
+    background-color: #d3b46c;
+    color: #fff;
+    padding: 5% 5% 2% 10%;
+    height: 100%;
+    justify-content: center;
+  }
+  li {
+    margin-top: 4%;
+  }
+/*End Services Style*/
 </style>
