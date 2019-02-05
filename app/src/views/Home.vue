@@ -4,10 +4,10 @@
       <div class="container">
         <div id="box">
           <div class="title">STYLE STARTS <strong>HERE.</strong></div>
-          <div id="button-box">
-            <router-link to="/check_in" class="button">Check In</router-link>
-            <router-link to="/user" class="button">Signup</router-link>
-          </div>
+        </div>
+        <div id="button-box">
+          <router-link to="/check_in" class="button">Check In</router-link>
+          <router-link to="/user" class="button">Signup</router-link>
         </div>
       </div>
     </div>

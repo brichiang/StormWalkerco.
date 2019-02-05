@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Barber from './views/Barber.vue'
+import Barber_setup from './views/Barber-setup.vue'
 import User from './views/User.vue'
 import CheckIn from './views/CheckIn.vue'
+import Barber from './views/Barber.vue'
+import Services from './views/Services.vue'
+import Contact from './views/Contact.vue'
 
 Vue.use(Router)
 
@@ -22,14 +25,29 @@ export default new Router({
       component: CheckIn
     },
     {
-      path:'/barber',
-      name: 'barber',
-      component: Barber
+      path:'/barber_setup',
+      name: 'barber_setup',
+      component: Barber_setup
     },
     {
       path:'/user',
       name: 'user',
       component: User
+    },
+    {
+      path:'/barber',
+      name: 'barber',
+      component: Barber
+    },
+    {
+      path:'/services',
+      name: 'services',
+      component: Services
+    },
+    {
+      path:'/contact',
+      name: 'contact',
+      component: Contact
     },
   ]
 })

@@ -4,12 +4,14 @@
       <div id="container">
         <div id="logo">
           <router-link to="/">
-            Storm Walker co.
+            <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="350px;">
           </router-link>
         </div>
         <div id="nav">
           <router-link to="/">Home</router-link> |
-          <router-link to ="/barber">Barber</router-link>
+          <router-link to ="/barber">Barber</router-link> |
+          <router-link to="/Services">Services</router-link> |
+          <router-link to="/Contact">Contact</router-link>
         </div>
       </div>
     </header>
@@ -54,6 +56,19 @@
 
   #nav a.router-link-exact-active {
     color: #42b983;
+  }
+  .header {
+    width: 100%;
+    text-align: center;
+    background-image: url(assets/imgs/barbershop.jpg);
+    background-size: cover;
+    padding: 15% 0 15% 0;
+    margin-bottom: 5%;
+  }
+  .header-title {
+    color: #fff;
+    font-size: 5em;
+    font-weight:bolder;
   }
 /* End Header Style */
 /* Form Style */
@@ -104,9 +119,6 @@
     border: none;
     border-bottom: 2px solid #000000;
   }
-  input[type="text"] {
-    font-size: 1.5em;
-  }
   .buttom-box {
     text-align: center;
   }
@@ -124,10 +136,10 @@
     background-size: cover;
     justify-content: center;
     display: flex;
+    padding: 10% 0 10% 0;
   }
   #box{
     width: 50%;
-    padding: 10% 0 30% 0;
   }
   .button {
     width: 200px;
@@ -158,4 +170,21 @@
     margin-bottom: auto;
   }
 /* End Home Style */
+/* Barber Style */
+  .profile {
+    margin-bottom: 10%;
+  }
+/*End Barber Style*/
+/*Contact Style */
+  .column {
+    float: left;
+    width: 50%;
+  }
+  .contact-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 2px;
+  }
+/*End Contact Style*/
 </style>
