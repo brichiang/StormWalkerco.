@@ -12,7 +12,7 @@
           </div>
           <div class="col-md-6">
             <div class="info-box">
-              <h3>OUR SERVICES:</h3>
+              <h3><strong>OUR SERVICES:</strong></h3>
               <ul>
                 <li>Haircuts</li>
                 <li>Blends</li>
@@ -33,7 +33,7 @@
           </div>
           <div class="col-md-6">
             <div class="info-box">
-              <h3>FULL SPECTRUM OF COLOR SERVICES INCLUDING:</h3>
+              <h3><strong>FULL SPECTRUM OF COLOR SERVICES INCLUDING:</strong></h3>
               <ul>
                 <li>Hair Coloring</li>
                 <li>Grey Coverage</li>

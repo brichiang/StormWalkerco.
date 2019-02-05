@@ -8,6 +8,8 @@ import Barber from './views/Barber.vue'
 import Services from './views/Services.vue'
 import Contact from './views/Contact.vue'
 
+import footer from './components/Footer.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -49,5 +51,10 @@ export default new Router({
       name: 'contact',
       component: Contact
     },
+//    {
+//      path:'/footer',
+//      name: 'footer',
+//      component: footer
+//    },
   ]
 })

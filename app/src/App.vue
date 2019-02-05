@@ -16,8 +16,23 @@
       </div>
     </header>
     <router-view/>
+    <pageFooter />
   </div>
 </template>
+
+<script>
+import pageFooter from '@/components/Footer.vue'
+  
+export default {
+  name:"app",
+  components: {
+    pageFooter
+  }
+}  
+  
+  
+  
+</script>
 
 <style>
   @import url("https://fonts.googleapis.com/css?family=Montserrat");
