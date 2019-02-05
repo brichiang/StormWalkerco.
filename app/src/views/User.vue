@@ -69,7 +69,7 @@
                 fd.append("lname", this.l_Name);
                 fd.append("email", this.email);
                 fd.append("phone", this.phone);
-                fd.append("password", this.phone);
+                fd.append("password", this.password);
                 
                 fetch('http://localhost:8888/StormWalkerco.server/insert_user.php', {
                     method:"POST",
