@@ -16,10 +16,10 @@
                 <th>DATE</th>
                 <th>TIME</th>
               </tr>
-              <tr>
-                <td>Brian</td>
-                <td>2018/12/30</td>
-                <td>11:30AM</td>
+              <tr v-for="a in appointments">
+                <td>{{a.barber_id}}</td>
+                <td>{{a.date}}</td>
+                <td>{{a.time}}</td>
               </tr>
             </table>
           </div>
@@ -34,7 +34,7 @@
                 <label for="barber">BARBER</label>
                 <br/>
                 <div class="form-input">
-                  <select name="barber" id="barber" class="select-box" >
+                  <select name="barber" id="barber" class="select-box" v-model="barber_id" >
                     <option value=""></option>
                     <option value="Brian">BRIAN</option>
                     <option value="Matei">MATEI</option>
@@ -101,7 +101,9 @@
                 date:"",
                 time:"",
                 description:"",
-                image:""
+                image:"",
+                barber_id:"",
+                appointments:""
             }
         },
         methods:{
@@ -112,6 +114,13 @@
                 fd.append("time", this.time);
                 fd.append("description", this.description);
                 fd.append("image", this.image);
+                if (this.barber_id === "Brian"){
+                    fd.append("barber_id", 1);
+                } if (this.barber_id === "Matei"){
+                      fd.append("barber_id", 2);
+                  } if (this.barber_id === "Bryan"){
+                        fd.append("barber_id", 3);
+                    }
                 
                 fetch('http://localhost:8888/StormWalkerco.server/insert_appointment.php', {
                     method:"POST",
@@ -123,7 +132,30 @@
                         alert("Appointment Created Successfuly")
                     }
                 });
+            },
+            
+            CheckBarber: function(barber_id){
+                if(barber_id === 1){
+                    return "Brian";
+                }
+                if(barber_id === 2){
+                    return "Matei";
+                }
+                if(barber_id === 3){
+                    return "Bryan";
+                }
             }
+        },
+        beforeMount(){
+            fetch('http://localhost:8888/StormWalkerco.server/get_appointments.php', {
+                method:"POST"
+            }).then((response)=>{
+                return response.json();
+            }).then((json)=>{
+                if(json){
+                    this.appointments = json;
+                }
+            });
         }
     }
 </script>

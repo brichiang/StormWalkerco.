@@ -5,33 +5,16 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" v-for="b in barbers">
           <div class="profile">
             <a href="check_in">
               <img src="@/assets/imgs/profile.png" width="100%">
             </a>
-            <h4>BRIAN CHIANG</h4>
-            <p>Barber 1</p>
+            <h4>{{b.f_name}} {{b.l_name}}</h4>
+            <p>{{b.description}}</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="profile">
-            <a href="check_in">
-              <img src="@/assets/imgs/profile.png" width="100%">
-            </a>
-            <h4>MATEI CIUCANU</h4>
-            <p>Barber 2</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="profile">
-            <a href="check_in">
-              <img src="@/assets/imgs/profile.png" width="100%">
-            </a>
-            <h4>BRYAN CHIU</h4>
-            <p>Barber 3</p>
-          </div>
-        </div>
+        
         <div class="col-md-4">
           <div class="profile">
             <a href="barber_setup">
@@ -44,3 +27,27 @@
     </div>
   </div>
 </template>
+
+<script>
+    export default {
+        name:"Barber",
+        data(){
+            return {
+                barbers:""
+            }
+        },
+        methods:{
+        },
+        beforeMount(){
+            fetch('http://localhost:8888/StormWalkerco.server/get_barbers.php', {
+                method:"POST"
+            }).then((response)=>{
+                return response.json();
+            }).then((json)=>{
+                if(json){
+                    this.barbers = json;
+                }
+            });
+        }
+    }
+</script>

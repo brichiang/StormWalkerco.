@@ -11,8 +11,9 @@ $time = $_POST['time'];
 $date = $_POST['date'];
 $image = $_POST['image'];
 $description = $_POST['description'];
+$barber_id = $_POST['barber_id'];
 
-$query = "INSERT INTO Appointments (user_id, barber_id, time, date, image, description, services) VALUES ('1', '1', '$time', '$date', '$image', '$description', 'haircut')";
+$query = "INSERT INTO Appointments (user_id, barber_id, time, date, image, description, services) VALUES ('1', '$barber_id', '$time', '$date', '$image', '$description', 'haircut')";
 
 $result = $conn->query($query);
 if($result){
