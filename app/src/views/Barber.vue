@@ -7,21 +7,27 @@
       <div class="row">
         <div class="col-md-4">
           <div class="profile">
-            <img src="@/assets/imgs/profile.png" width="100%">
+            <a href="check_in">
+              <img src="@/assets/imgs/profile.png" width="100%">
+            </a>
             <h4>BRIAN CHIANG</h4>
             <p>Barber 1</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="profile">
-            <img src="@/assets/imgs/profile.png" width="100%">
+            <a href="check_in">
+              <img src="@/assets/imgs/profile.png" width="100%">
+            </a>
             <h4>MATEI CIUCANU</h4>
             <p>Barber 2</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="profile">
-            <img src="@/assets/imgs/profile.png" width="100%">
+            <a href="check_in">
+              <img src="@/assets/imgs/profile.png" width="100%">
+            </a>
             <h4>BRYAN CHIU</h4>
             <p>Barber 3</p>
           </div>

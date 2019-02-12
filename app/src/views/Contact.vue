@@ -18,10 +18,10 @@
           </div>
           <div class="column">
             <p>CLOSED</p>
-            <p>11:00AM - 9:00PM</p>
-            <p>11:00AM - 9:00PM</p>
-            <p>11:00AM - 9:00PM</p>
-            <p>11:00AM - 9:00PM</p>
+            <p>11:00AM - 8:00PM</p>
+            <p>11:00AM - 8:00PM</p>
+            <p>11:00AM - 8:00PM</p>
+            <p>11:00AM - 8:00PM</p>
             <p>11:00AM - 6:00PM</p>
             <p>CLOSED</p>
           </div>

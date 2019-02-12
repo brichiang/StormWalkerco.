@@ -131,8 +131,14 @@ export default {
   }
   .form-input {
     width: 100%;
+    height: 40px;
     border: none;
     border-bottom: 2px solid #000000;
+  }
+  .select-box {
+    width: 100%;
+    background-color: #fff;
+    border-style: none;
   }
   .buttom-box {
     text-align: center;
@@ -145,6 +151,35 @@ export default {
     padding: 2% 0 2% 0;
   }
 /* End Form Style */
+/* Appointment Style */
+  .appoint-box {
+    background-color:dimgray;
+    padding:10% 15% 10% 15%;
+    height:100%;
+    justify-content: center;
+    display: flex;
+  }
+  .appoint-box2 {
+    background-color:#ffffff;
+    width: 100%;
+    padding: 5%;
+  }
+  .appoint-title {
+    font-size: 3em;
+    margin-bottom: 7%;
+    border-bottom: 2px solid #000000;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    font-size: 1.5em;
+  }
+  td {
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+/* End Appointment Style */
 /* Home Style */
   #home-box1 {
     background-color: rgba(0,0,0,.5);
