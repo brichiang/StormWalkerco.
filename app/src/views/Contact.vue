@@ -31,7 +31,8 @@
           <input type="text" name="Name" id="name" class="contact-input" placeholder="NAME"/>
           <input type="email" name="Email" id="email" class="contact-input" placeholder="EMAIL"/>
           <input type="text" name="Subject" id="subject" class="contact-input" placeholder="SUBJECT"/>
-          <textarea name="description" id="description" class="contact-input" rows="5" placeholder="MESSAGE"></textarea>
+          <textarea name="description" id="description" class="contact-input" rows="3" placeholder="MESSAGE"></textarea>
+          <button id="contact-but">SEND</button>
         </div>
       </div>
     </div>

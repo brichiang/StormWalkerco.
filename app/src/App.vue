@@ -1,20 +1,45 @@
 <template>
   <div id="app">
-    <header>
+    <page-header />
+    <!-- <header>
       <div id="container">
-        <div id="logo">
-          <router-link to="/">
-            <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="350px;">
-          </router-link>
+        <div class="item-box">
+          <div id="logo">
+            <router-link to="/">
+              <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="350px;">
+            </router-link>
+          </div>
         </div>
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to ="/barber">Barber</router-link> |
-          <router-link to="/Services">Services</router-link> |
-          <router-link to="/Contact">Contact</router-link>
+        <div class="item-box">
+          <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><router-link to="/">Home</router-link></li>
+                  <li><router-link to ="/barber">Barber</router-link></li>
+                  <li><router-link to="/Services">Services</router-link></li>
+                  <li><router-link to="/Contact">Contact</router-link></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div id="nav">
+            <router-link to="/">Home</router-link>
+            <router-link to ="/barber">Barber</router-link>
+            <router-link to="/Services">Services</router-link>
+            <router-link to="/Contact">Contact</router-link>
+          </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <router-view/>
     <pageFooter />
   </div>
@@ -22,11 +47,13 @@
 
 <script>
 import pageFooter from '@/components/Footer.vue'
+import pageHeader from '@/components/Header.vue'
   
 export default {
   name:"app",
   components: {
-    pageFooter
+    pageFooter,
+    pageHeader
   }
 }  
   
@@ -46,46 +73,6 @@ export default {
 */
     color: #000000;
   }
-/* Header Style */
-  header {
-    background-color: #ffffff;
-  }
-  #container {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
-  #logo {
-    color: #000000;
-    padding: 30px;
-  }
-
-  #nav {
-    padding: 30px;
-  }
-
-  #nav a {
-    font-weight: bold;
-    color: #2c3e50;
-  }
-
-  #nav a.router-link-exact-active {
-    color: #42b983;
-  }
-  .header {
-    width: 100%;
-    text-align: center;
-    background-image: url(assets/imgs/barbershop.jpg);
-    background-size: cover;
-    padding: 15% 0 15% 0;
-    margin-bottom: 5%;
-  }
-  .header-title {
-    color: #fff;
-    font-size: 5em;
-    font-weight:bolder;
-  }
-/* End Header Style */
 /* Form Style */
   .col-md-6 {
     padding-left: 0%;
@@ -219,6 +206,19 @@ export default {
     margin-top: auto;
     margin-bottom: auto;
   }
+  .header {
+    width: 100%;
+    text-align: center;
+    background-image: url(assets/imgs/barbershop.jpg);
+    background-size: cover;
+    padding: 15% 0 15% 0;
+    margin-bottom: 5%;
+  }
+  .header-title {
+    color: #fff;
+    font-size: 5em;
+    font-weight:bolder;
+  }
 /* End Home Style */
 /* Barber Style */
   .profile {
@@ -226,6 +226,9 @@ export default {
   }
 /*End Barber Style*/
 /*Contact Style */
+  #contact {
+    margin-bottom: 5%;
+  }
   .column {
     float: left;
     width: 50%;
@@ -235,6 +238,13 @@ export default {
     padding: 10px;
     border: 1px solid #000;
     margin: 2px;
+  }
+  #contact-but {
+    background-color: #d3b46c;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    padding: 2px 30px 2px 30px;
   }
 /*End Contact Style*/
 /*Services Style*/
