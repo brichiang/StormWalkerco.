@@ -134,18 +134,6 @@
                         alert("Appointment Created Successfuly")
                     }
                 });
-            },
-            
-            CheckBarber: function(barber_id){
-                if(barber_id === 1){
-                    return "Brian";
-                }
-                if(barber_id === 2){
-                    return "Matei";
-                }
-                if(barber_id === 3){
-                    return "Bryan";
-                }
             }
         },
         beforeMount(){
