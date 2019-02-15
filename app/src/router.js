@@ -7,6 +7,7 @@ import CheckIn from './views/CheckIn.vue'
 import Barber from './views/Barber.vue'
 import Services from './views/Services.vue'
 import Contact from './views/Contact.vue'
+import Login from './views/Login.vue'
 
 import footer from './components/Footer.vue'
 
@@ -51,6 +52,11 @@ export default new Router({
       name: 'contact',
       component: Contact
     },
+    {
+      path:'/login',
+      name: 'loging',
+      component: Login
+    }
 //    {
 //      path:'/footer',
 //      name: 'footer',
