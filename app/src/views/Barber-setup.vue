@@ -23,6 +23,14 @@
                 <input type="text" name="l_Name" id="l_name" class="form-input" v-model="l_Name" />
               </div>
               <div class="form-group">
+                <label for="email">EMAIL</label><br/>
+                <input type="text" name="email" id="email" class="form-input" v-model="email" />
+              </div>
+              <div class="form-group">
+                <label for="password">PASSWORD</label><br/>
+                <input type="password" name="password" id="password" class="form-input" v-model="password" />
+              </div>
+              <div class="form-group">
                 <label for="description">DESCRIPTION</label><br/>
                 <textarea name="description" id="description" class="form-control" v-model="description" rows="5"></textarea>
               </div>
@@ -48,6 +56,8 @@
             return {
                 f_Name:"",
                 l_Name:"",
+                email:"",
+                password:"",
                 description:"",
                 image:""
             }
@@ -58,6 +68,8 @@
                 var fd = new FormData();
                 fd.append("fname", this.f_Name);
                 fd.append("lname", this.l_Name);
+                fd.append("email", this.email);
+                fd.append("password", this.password);
                 fd.append("description", this.description);
                 fd.append("image", this.image);
                 
