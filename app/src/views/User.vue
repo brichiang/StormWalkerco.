@@ -71,7 +71,7 @@
                 fd.append("phone", this.phone);
                 fd.append("password", this.password);
                 
-                fetch('http://localhost:8888/StormWalkerco.server/insert_user.php', {
+                fetch('https://stormwalker.herokuapp.com/insert_user.php', {
                     method:"POST",
                     body:fd,
                 }).then((response)=>{

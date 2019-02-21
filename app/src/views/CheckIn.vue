@@ -124,7 +124,7 @@
                         fd.append("barber_id", 3);
                     }
                 
-                fetch('http://localhost:8888/StormWalkerco.server/insert_appointment.php', {
+                fetch('https://stormwalker.herokuapp.com/insert_appointment.php', {
                     method:"POST",
                     body:fd,
                 }).then((response)=>{
@@ -137,7 +137,7 @@
             }
         },
         beforeMount(){
-            fetch('http://localhost:8888/StormWalkerco.server/get_appointments.php', {
+            fetch('https://stormwalker.herokuapp.com/get_appointments.php', {
                 method:"POST"
             }).then((response)=>{
                 return response.json();
