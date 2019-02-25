@@ -272,12 +272,16 @@ export default {
   }
   .schedule {
     padding: 0 10% 0 10%;
-    justify-content: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .schedule-box {
     border: 4px solid #f3f3f3;
-    width: 600px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
   }
   .profile-pic {
     border-radius: 150px;
