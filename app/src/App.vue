@@ -55,10 +55,7 @@ export default {
     pageFooter,
     pageHeader
   }
-}  
-  
-  
-  
+}
 </script>
 
 <style>
@@ -72,6 +69,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
 */
     color: #000000;
+    text-transform: uppercase;
   }
 /* Form Style */
   .col-md-6 {
@@ -169,8 +167,9 @@ export default {
 /* End Appointment Style */
 /* Home Style */
   #home-box1 {
-    background-color: rgba(0,0,0,.5);
+    background-image: url(assets/imgs/barbershop.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     justify-content: center;
     display: flex;
     padding: 10% 0 10% 0;
@@ -262,4 +261,24 @@ export default {
     margin-top: 4%;
   }
 /*End Services Style*/
+/*Account Style*/
+  .account-header {
+    font-weight:bolder;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .account {
+    margin-bottom: 50px;
+  }
+  .schedule {
+    padding: 0 10% 0 10%;
+  }
+  .schedule-box {
+    border: 4px solid #f3f3f3;
+  }
+  .profile-pic {
+    border-radius: 150px;
+    width: 150px;
+  }
+/*End Account Style*/
 </style>

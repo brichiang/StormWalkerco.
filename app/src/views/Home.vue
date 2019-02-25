@@ -16,7 +16,7 @@
         <div class="row">
           <div class="col-md-6">
             <div id="image-box">
-              <img src="@/assets/imgs/barbershop.jpg" width="100%;">
+              <img src="@/assets/imgs/barbershop2.jpg" width="100%;">
             </div>
           </div>
           <div class="col-md-6">

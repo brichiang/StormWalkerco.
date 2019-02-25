@@ -8,6 +8,7 @@ import Barber from './views/Barber.vue'
 import Services from './views/Services.vue'
 import Contact from './views/Contact.vue'
 import Login from './views/Login.vue'
+import MyAccount from './views/MyAccount.vue'
 
 import footer from './components/Footer.vue'
 
@@ -54,13 +55,13 @@ export default new Router({
     },
     {
       path:'/login',
-      name: 'loging',
+      name: 'login',
       component: Login
+    },
+    {
+      path:'/myaccount',
+      name: 'myaccount',
+      component: MyAccount
     }
-//    {
-//      path:'/footer',
-//      name: 'footer',
-//      component: footer
-//    },
   ]
 })
