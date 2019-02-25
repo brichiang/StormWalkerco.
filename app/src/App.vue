@@ -272,13 +272,22 @@ export default {
   }
   .schedule {
     padding: 0 10% 0 10%;
+    justify-content: center;
+    display: flex;
   }
   .schedule-box {
     border: 4px solid #f3f3f3;
+    width: 600px;
   }
   .profile-pic {
     border-radius: 150px;
-    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 20px;
+  }
+  .information {
+    margin: 20px;
+    height: 150px;
   }
 /*End Account Style*/
 </style>

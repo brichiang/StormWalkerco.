@@ -7,9 +7,11 @@
       <div class="schedule">
         <div class="schedule-box">
           <img src="@/assets/imgs/profile1.jpg" class="profile-pic"/>
-          <h3>Kevin Jones</h3>
-          <p><span>Date:</span> 02.28.19</p>
-          <p><span>Time:</span> 03:00PM</p>
+          <div class="information">
+            <h3>Kevin Jones</h3>
+            <p><span>Date:</span> 02.28.19</p>
+            <p><span>Time:</span> 03:00PM</p>
+          </div>
         </div>
       </div>
     </div>
