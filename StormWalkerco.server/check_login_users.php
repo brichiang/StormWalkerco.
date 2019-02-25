@@ -14,7 +14,8 @@ $query = "SELECT * FROM Users WHERE email='$email' AND password='$password'";
 
 $result = $conn->query($query);
 if($result){
-  echo json_encode(true);
+  $allowed = $result->fetchAll();
+  echo json_encode($allowed);
 } else {
   echo json_encode(false);
 }
