@@ -39,7 +39,7 @@
         methods:{
         },
         beforeMount(){
-            fetch('http://localhost:8888/StormWalkerco.server/get_barbers.php', {
+            fetch('https://stormwalker.herokuapp.com/get_barbers.php', {
                 method:"POST"
             }).then((response)=>{
                 return response.json();

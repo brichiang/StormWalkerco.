@@ -73,7 +73,7 @@
                 fd.append("description", this.description);
                 fd.append("image", this.image);
                 
-                fetch('http://localhost:8888/StormWalkerco.server/insert_barber.php', {
+                fetch('https://stormwalker.herokuapp.com/insert_barber.php', {
                     method:"POST",
                     body:fd,
                 }).then((response)=>{
