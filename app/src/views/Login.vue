@@ -48,15 +48,16 @@
                 fd.append("email", this.email);
                 fd.append("password", this.password);
                 
-                fetch('http://localhost:8888/StormWalkerco.server/check_login_users.php', {
+                fetch('https://stormwalker.herokuapp.com/check_login_users.php', {
                     method:"POST",
                     body:fd,
                 }).then((response)=>{
                     return response.json();
                 }).then((json)=>{
+                    console.log(json);
                     if(json.length == 0 || "" || null){
                       
-                      fetch('http://localhost:8888/StormWalkerco.server/check_login_barbers.php', {
+                      fetch('https://stormwalker.herokuapp.com/check_login_barbers.php', {
                         method:"POST",
                         body:fd,
                       }).then((response)=>{
@@ -70,7 +71,6 @@
                       });
                       
                     } else {
-                      console.log(json);
                       alert("Loged In Successfuly");
                     } 
                   
