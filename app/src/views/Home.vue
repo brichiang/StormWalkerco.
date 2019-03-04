@@ -7,7 +7,7 @@
         </div>
         <div id="button-box">
           <router-link to="/check_in" class="button">Check In</router-link>
-          <router-link to="/user" class="button">Signup</router-link>
+          <router-link to="/user" class="button">Sign up</router-link>
         </div>
       </div>
     </div>

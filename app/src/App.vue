@@ -71,6 +71,9 @@ export default {
     color: #000000;
     text-transform: uppercase;
   }
+  h1 h2 h3 h4 h5 h6 {
+    letter-spacing: 2px;
+  }
 /* Form Style */
   .col-md-6 {
     padding-left: 0%;
@@ -88,8 +91,9 @@ export default {
     width: 70%;
   }
   .title {
-    font-size: 5em;
+    font-size: 4em;
     color: #ffffff;
+    letter-spacing: 10px;
   }
   .form-box {
     background-color:lightgray;
@@ -104,15 +108,17 @@ export default {
     padding: 5%;
   }
   .form-title {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 7%;
     border-bottom: 2px solid #000000;
+    letter-spacing: 2px;
   }
   .form-group {
     margin-bottom: 5%;
   }
   label {
-    font-size: 1.8em;
+    font-size: 1.3em;
+    letter-spacing: 2px;
   }
   .form-input {
     width: 100%;
@@ -129,8 +135,9 @@ export default {
     text-align: center;
   }
   .form-buttom {
-    width: 200px;
-    font-size: 1.8em;
+    width: 180px;
+    font-size: 1.3em;
+    letter-spacing: 2px;
     color: #ffffff;
     background-color: #000000;
     padding: 2% 0 2% 0;
@@ -150,19 +157,22 @@ export default {
     padding: 5%;
   }
   .appoint-title {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 7%;
     border-bottom: 2px solid #000000;
+    letter-spacing: 2px;
   }
   table {
     width: 100%;
   }
   th {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    letter-spacing: 2px;
   }
   td {
-    font-size: 1.3em;
+    font-size: 0.9em;
     text-transform: uppercase;
+    letter-spacing: 1px;
   }
 /* End Appointment Style */
 /* Home Style */
@@ -175,17 +185,18 @@ export default {
     padding: 10% 0 10% 0;
   }
   #box{
-    width: 50%;
+    width: 40%;
   }
   .button {
-    width: 200px;
-    margin: 40px 60px 20px 0;
+    width: 150px;
+    margin: 40px 40px 20px 0;
     padding: 10px 20px 10px 20px;
-    font-size: 1.2em;
+    font-size: 1.0em;
     background-color: #ffffff;
     color: #000;
     float: left;
     text-align: center;
+    letter-spacing: 2px;
   }
   #home-box2 {
     justify-content: center;
@@ -215,8 +226,9 @@ export default {
   }
   .header-title {
     color: #fff;
-    font-size: 5em;
+    font-size: 4em;
     font-weight:bolder;
+    letter-spacing: 10px;
   }
 /* End Home Style */
 /* Barber Style */
@@ -276,12 +288,24 @@ export default {
     flex-direction: column;
     justify-content: center;
   }
+  .schedule-frame {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+  }
   .schedule-box {
     border: 4px solid #f3f3f3;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 100%;
     margin-bottom: 20px;
+  }
+  .schedule-but {
+    margin-right: 10px;
+    padding: 5px 20px 5px 20px;
+    background-color: #d3b46c;
+    color: #fff;
+    font-size: 1.0em;
+    letter-spacing: 2px;
   }
   .profile-pic {
     border-radius: 150px;
@@ -294,4 +318,35 @@ export default {
     height: 150px;
   }
 /*End Account Style*/
+/* Modal */
+  .modal-form {
+    position: fixed;
+    width: 400px;
+    margin: auto;
+    top: 5%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .modal-body {
+    background-color: rgba(0,0,0,0.5);
+  }
+  .modal-box {
+    background-color: #fff;
+    padding: 20px;
+  }
+  .modal-title {
+    font-size: 2em;
+    border-bottom: 2px solid #000000;
+    letter-spacing: 2px;
+  }
+  .modal-group {
+    margin-bottom: 5px;
+  }
+  .modal-input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+  }
+/* End Modal */
 </style>

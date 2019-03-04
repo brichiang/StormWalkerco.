@@ -6,16 +6,17 @@
       </div>
       <div class="schedule">
         
-        <div class="schedule-box" v-for="a in appointments">
+        <div class="schedule-frame" v-for="a in appointments">
+          <div class="schedule-box">
             <img src="@/assets/imgs/profile.gif" class="profile-pic"/>
-          <div class="information">
-            <h3>Bryan</h3>
-            <p><span>Date: </span>{{a.date}}</p>
-            <p><span>Time: </span>{{a.time}}</p>
-            <P>{{a.description}}</P>
+            <div class="information">
+              <h3>Bryan</h3>
+              <p><span>Date: </span>{{a.date}}</p>
+              <p><span>Time: </span>{{a.time}}</p>
+              <P>{{a.description}}</P>
+            </div>
           </div>
         </div>
-        
       </div>
     </div>
 </template>

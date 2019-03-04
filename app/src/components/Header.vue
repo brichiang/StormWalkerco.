@@ -5,7 +5,9 @@
       <mdb-navbar class="mt-2" animated animation="1">
         <!-- Navbar brand -->
         <mdb-navbar-brand id="logo">
-          <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="300px;">
+          <a href="/">
+            <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="250px;">
+          </a>
         </mdb-navbar-brand>
         <mdb-navbar-toggler>
           <mdb-navbar-nav right id="nav">
@@ -59,12 +61,14 @@ export default {
   }
   #logo {
     color: #000000;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
     /* float: left; */
   }
 
   #nav {
-    padding: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
+    font-size: 0.9em;
+    letter-spacing: 1px;
     /* text-align: right; */
   }
 
