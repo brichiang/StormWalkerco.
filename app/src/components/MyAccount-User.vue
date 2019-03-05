@@ -5,7 +5,8 @@
        <h4>VIEW/RESCHEDULE</h4>
     </div>
     <div class="schedule">
-       <div class="schedule-frame" v-for="a in appointments">
+       
+      <div class="schedule-frame" v-for="a in appointments">
         <div class="schedule-box">
           <img src="@/assets/imgs/profile1.jpg" class="profile-pic"/>
           <div class="information">
@@ -15,41 +16,103 @@
             <p><span>Date: </span>{{a.date}}</p>
              <p><span>Time: </span>{{a.time}}</p>
           </div>
+            <button class="schedule-but" @click="open_form">RESCHEDULE</button>
+            <button class="schedule-but" @click="open_modal">DELETE APPOINTMENT</button>
+            <div v-if="form == true" class="modal-form">
+              <div class="modal-body">
+                <div class="modal-box">
+                  <div class="modal-title">CHECK IN</div>
+                  <form>
+                    <div class="modal-group">
+                      <label for="barber">BARBER</label>
+                      <br/>
+                      <div class="modal-input">
+                        <select name="barber" id="barber" class="select-box" v-model="barber">
+                          <option value=""></option>
+                          <option value="1">BRIAN</option>
+                          <option value="2">MATEI</option>
+                          <option value="3">BRYAN</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-group">
+                      <label for="date">DATE</label>
+                      <br/>
+                      <input type="date" name="date" id="date" class="modal-input" v-model="date"/>
+                    </div>
+                    <div class="modal-group">
+                      <label for="time">TIME</label><br/>
+                        <div class="modal-input">
+                          <select name="time" id="time" class="select-box" v-model="time">
+                            <option value=""></option>
+                            <option value="11:00am">11:OOAM</option>
+                            <option value="11:30am">11:3OAM</option>
+                            <option value="12:00pm">12:OOPM</option>
+                            <option value="12:30pm">12:3OPM</option>
+                            <option value="01:00pm">1:OOPM</option>
+                            <option value="01:30pm">1:3OPM</option>
+                            <option value="02:00pm">2:OOPM</option>
+                            <option value="02:30pm">2:3OPM</option>
+                            <option value="03:00pm">3:OOPM</option>
+                            <option value="03:30pm">3:3OPM</option>
+                            <option value="04:00pm">4:OOPM</option>
+                            <option value="04:30pm">4:3OPM</option>
+                            <option value="05:00pm">5:OOPM</option>
+                            <option value="05:30pm">5:3OPM</option>
+                            <option value="06:00pm">6:OOPM</option>
+                            <option value="06:30pm">6:3OPM</option>
+                            <option value="07:00pm">7:0OPM</option>
+                            <option value="07:30pm">7:3OPM</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="modal-group">
+                        <label for="description">DESCRIPTION</label>
+                        <br/>
+                        <textarea name="description" id="description" class="form-control" rows="5" v-model="description"></textarea>
+                      </div>
+                      <div class="modal-group">
+                        <label for="image">PROFILE</label><br/>
+                        <input type="file" name="image" id="image" accept="image/*"/>
+                      </div>
+                    </form>
+                    <div class="buttom-box">
+                      <button class="modal-button" @click="Update(a.appointment_id)">UPDATE</button>
+                    </div>
+                  </div>
+                </div>
+              <button @click="close_form" class="modal-button">CLOSE</button>
+            </div>
+            <div class="confirm-box" v-if="modal == true">
+              <div class="confirm-box2">
+                <div class="modal-title"><strong>DELETE APPOINTMENT</strong></div>
+                <div class="buttom-box">
+                  <button class="modal-button" @click="Delete(a.appointment_id)">CONFIRM</button>
+                  <button class="modal-button" @click="close_modal">CANCEL</button>
+                </div>
+              </div>
+            </div>
          </div>
-         <button class="schedule-but" @click="open_form">RESCHEDULE</button>
-         <button class="schedule-but" @click="open_modal">CANCEL SCHEDULE</button>
        </div>
-    </div>
-    <div v-if="form == true" class="modal-form">
-      <updateForm />
-      <button @click="close_form" class="modal-button">CLOSE</button>
-    </div>
-    <div class="confirm-box" v-if="modal == true">
-      <div class="confirm-box2">
-        <div class="modal-title"><strong>DELETE APPOINTMENT</strong></div>
-        <div class="buttom-box">
-          <button class="modal-button">CONFIRM</button>
-          <button class="modal-button" @click="close_modal">CANCEL</button>
-        </div>
-      </div>
+      
     </div>
   </div>
 </template>
 
 <script>
-  import updateForm from '@/components/Update-form.vue'
   
   export default {
     name:"AccountUser",
-    components: {
-      updateForm,
-    },
     data(){
       return {
         appointments:"",
         name:"",
         form: false,
-        modal: false
+        modal: false,
+        barber:"",
+        date:"",
+        time:"",
+        description:""
       }
     },
     methods :{
@@ -65,6 +128,40 @@
       close_modal: function() {
         this.modal = false;
       },
+      Delete: function(appointment_id) {
+        var fd = new FormData();
+        fd.append("appointment_id", appointment_id);
+        
+        fetch('https://stormwalker.herokuapp.com/delete_appointment.php', {
+            method:"POST",
+            body:fd,
+          }).then((response)=>{
+            return response.json();
+          }).then((json)=>{
+            if(json){
+              alert("Appointment Deleted Successfuly")
+            }
+        });
+      },
+      Update: function(appointment_id) {
+        var fd = new FormData();
+        fd.append("appointment_id", appointment_id);
+        fd.append("barber_id", this.barber);
+        fd.append("date", this.date);
+        fd.append("time", this.time);
+        fd.append("description", this.description);
+        
+        fetch('https://stormwalker.herokuapp.com/update_appointment.php', {
+          method:"POST",
+          body:fd,
+        }).then((response)=>{
+          return response.json();
+        }).then((json)=>{
+          if(json){
+            alert("Appointment Updated Successfuly")
+          }
+        }); 
+      }
     },
     beforeMount(){
       var fd = new FormData();
@@ -81,4 +178,5 @@
       });
     }
   }
+  
 </script>
