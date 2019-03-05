@@ -17,12 +17,21 @@
           </div>
          </div>
          <button class="schedule-but" @click="open_form">RESCHEDULE</button>
-         <button class="schedule-but">CANCEL SCHEDULE</button>
+         <button class="schedule-but" @click="open_modal">CANCEL SCHEDULE</button>
        </div>
     </div>
     <div v-if="form == true" class="modal-form">
       <updateForm />
-      <button @click="close_form" class="">CLOSE</button>
+      <button @click="close_form" class="modal-button">CLOSE</button>
+    </div>
+    <div class="confirm-box" v-if="modal == true">
+      <div class="confirm-box2">
+        <div class="modal-title"><strong>DELETE APPOINTMENT</strong></div>
+        <div class="buttom-box">
+          <button class="modal-button">CONFIRM</button>
+          <button class="modal-button" @click="close_modal">CANCEL</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +49,7 @@
         appointments:"",
         name:"",
         form: false,
+        modal: false
       }
     },
     methods :{
@@ -48,7 +58,13 @@
       },
       close_form: function(){
         this.form = false;
-      }
+      },
+      open_modal: function() {
+        this.modal = true;
+      },
+      close_modal: function() {
+        this.modal = false;
+      },
     },
     beforeMount(){
       var fd = new FormData();

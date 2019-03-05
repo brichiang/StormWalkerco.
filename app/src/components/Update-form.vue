@@ -57,7 +57,7 @@
         </div>
       </form>
       <div class="buttom-box">
-        <button class="modal-buttom">UPDATE</button>
+        <button class="modal-button">UPDATE</button>
       </div>
     </div>
   </div>

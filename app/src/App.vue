@@ -339,6 +339,7 @@ export default {
     font-size: 2em;
     border-bottom: 2px solid #000000;
     letter-spacing: 2px;
+    margin-bottom: 10px;
   }
   .modal-group {
     margin-bottom: 5px;
@@ -347,6 +348,36 @@ export default {
     width: 100%;
     border: none;
     border-bottom: 2px solid #000000;
+  }
+  .modal-button {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 20px 5px 20px;
+    letter-spacing: 2px;
+    margin: 0 10px 0 10px;
+  }
+  .confirm-box {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .confirm-box2 {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    height: 190px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 /* End Modal */
 </style>
