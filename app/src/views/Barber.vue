@@ -55,7 +55,7 @@
               <div class="confirm-box2">
                 <div class="modal-title"><strong>DELETE BARBER</strong></div>
                 <div class="buttom-box">
-                  <button class="modal-button">CONFIRM</button>
+                  <button class="modal-button" @click="Delete(b.barber_id)">CONFIRM</button>
                   <button class="modal-button" @click="close_modal">CANCEL</button>
                 </div>
               </div>
@@ -98,6 +98,21 @@
           close_update: function() {
             this.update = false;
           },
+          Delete: function(barber_id) {
+            var fd = new FormData();
+            fd.append("barber_id", barber_id);
+            
+            fetch('https://stormwalker.herokuapp.com/delete_barber.php', {
+              method:"POST",
+              body:fd,
+            }).then((response)=>{
+              return response.json();
+            }).then((json)=>{
+              if(json){
+                location.reload();
+              }
+            });
+          }
         },
         beforeMount(){
             fetch('https://stormwalker.herokuapp.com/get_barbers.php', {

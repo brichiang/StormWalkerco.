@@ -12,7 +12,7 @@
         <mdb-navbar-toggler>
           <mdb-navbar-nav right id="nav">
             <mdb-nav-item href="/" waves-fixed>HOME</mdb-nav-item>
-            <mdb-nav-item href="/barber" waves-fixed>BARBER</mdb-nav-item>
+            <mdb-nav-item href="/barber" waves-fixed>BARBERS</mdb-nav-item>
             <mdb-nav-item href="/Services" waves-fixed>SERVICES</mdb-nav-item>
             <mdb-nav-item href="/Contact" waves-fixed>CONTACT</mdb-nav-item>
             <mdb-nav-item href="/Login" waves-fixed>LOGIN</mdb-nav-item>
