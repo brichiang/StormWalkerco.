@@ -78,7 +78,8 @@
                     return response.json();
                 }).then((json)=>{
                     if(json){
-                        alert("Account Created Successfuly")
+                      alert("Account Created Successfuly");
+                      window.location.href = "/Login";
                     }
                 });
             }

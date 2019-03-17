@@ -7,7 +7,7 @@
       <div class="service-box">
         <div class="row">
           <div class="col-md-6">
-            <img src="@/assets/imgs/services.jpeg"
+            <img src="@/assets/imgs/barbershop4.jpg"
                  width="100%">
           </div>
           <div class="col-md-6">
@@ -28,7 +28,7 @@
       <div class="service-box">
         <div class="row">
           <div class="col-md-6">
-            <img src="@/assets/imgs/services.jpeg"
+            <img src="@/assets/imgs/hair.jpg"
                  width="100%">
           </div>
           <div class="col-md-6">

@@ -37,10 +37,7 @@
                 <br/>
                 <div class="form-input">
                   <select name="barber" id="barber" class="select-box" v-model="barber_id" >
-                    <option value=""></option>
-                    <option value="Brian">BRIAN</option>
-                    <option value="Matei">MATEI</option>
-                    <option value="Bryan">BRYAN</option>
+                    <option value="" v-for="b in barbers">{{b.f_name}}</option>
                   </select>
                 </div>
               </div>
@@ -105,7 +102,8 @@
                 description:"",
                 image:"",
                 barber_id:"",
-                appointments:""
+                appointments:"",
+                barbers:""
             }
         },
         methods:{
@@ -131,7 +129,8 @@
                     return response.json();
                 }).then((json)=>{
                     if(json){
-                        alert("Appointment Created Successfuly")
+                      alert("Appointment Created Successfuly");
+                      location.reload();
                     }
                 });
             }
@@ -144,6 +143,15 @@
             }).then((json)=>{
                 if(json){
                     this.appointments = json;
+                }
+            });
+             fetch('https://stormwalker.herokuapp.com/get_barbers.php', {
+                method:"POST"
+            }).then((response)=>{
+                return response.json();
+            }).then((json)=>{
+                if(json){
+                    this.barbers = json;
                 }
             });
         }

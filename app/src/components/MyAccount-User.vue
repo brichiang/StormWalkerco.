@@ -18,6 +18,7 @@
           </div>
             <button class="schedule-but" @click="open_form">RESCHEDULE</button>
             <button class="schedule-but" @click="open_modal">DELETE APPOINTMENT</button>
+            <!--Update Modal-->
             <div v-if="form == true" class="modal-form">
               <div class="modal-body">
                 <div class="modal-box">
@@ -80,9 +81,10 @@
                       <button class="modal-button" @click="Update(a.appointment_id)">UPDATE</button>
                     </div>
                   </div>
+                  <button @click="close_form" class="modal-button">CLOSE</button>
                 </div>
-              <button @click="close_form" class="modal-button">CLOSE</button>
             </div>
+            <!--Delete Modal-->
             <div class="confirm-box" v-if="modal == true">
               <div class="confirm-box2">
                 <div class="modal-title"><strong>DELETE APPOINTMENT</strong></div>
@@ -139,7 +141,7 @@
             return response.json();
           }).then((json)=>{
             if(json){
-              alert("Appointment Deleted Successfuly")
+              location.reload();
             }
         });
       },
@@ -158,7 +160,8 @@
           return response.json();
         }).then((json)=>{
           if(json){
-            alert("Appointment Updated Successfuly")
+            alert("Appointment Updated Successfuly");
+            location.reload();
           }
         }); 
       }

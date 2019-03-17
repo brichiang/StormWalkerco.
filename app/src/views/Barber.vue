@@ -8,11 +8,58 @@
         <div class="col-md-4" v-for="b in barbers">
           <div class="profile">
             <a href="check_in">
-              <img src="@/assets/imgs/profile.png" width="100%">
+              <img src="@/assets/imgs/profile.gif" width="100%">
             </a>
             <h4>{{b.f_name}} {{b.l_name}}</h4>
             <p>{{b.description}}</p>
+            <div>
+              <button class="schedule-but" @click="open_update">UPDATE</button>
+              <button class="schedule-but" @click="open_modal">DELETE</button>
+            </div>
           </div>
+          <!--Update Barber Modal-->
+          <div v-if="update == true" class="modal-form">
+              <div class="modal-body">
+                <div class="modal-box">
+                  <div class="modal-title">UPDATE BARBER</div>
+                  <form>
+                    <div class="modal-group">
+                      <label for="name">FIRST NAME</label>
+                      <br/>
+                      <input type="text" name="f_name" id="f_name" class="modal-input">
+                    </div>
+                    <div class="modal-group">
+                      <label for="l_name">LAST NAME</label>
+                      <br/>
+                      <input type="text" name="l_name" id="l_name" class="modal-input">
+                    </div>
+                    <div class="modal-group">
+                      <label for="description">DESCRIPTION</label>
+                      <br/>
+                      <textarea name="description" id="description" class="form-control" rows="5" v-model="description"></textarea>
+                    </div>
+                      <div class="modal-group">
+                        <label for="image">PROFILE</label><br/>
+                        <input type="file" name="image" id="image" accept="image/*"/>
+                      </div>
+                    </form>
+                    <div class="buttom-box">
+                      <button class="modal-button">UPDATE</button>
+                    </div>
+                  </div>
+                  <button @click="close_update" class="modal-button">CLOSE</button>
+                </div>
+            </div>
+          <!--Delete Barber Modal-->
+          <div class="confirm-box"  v-if="modal == true">
+              <div class="confirm-box2">
+                <div class="modal-title"><strong>DELETE BARBER</strong></div>
+                <div class="buttom-box">
+                  <button class="modal-button">CONFIRM</button>
+                  <button class="modal-button" @click="close_modal">CANCEL</button>
+                </div>
+              </div>
+            </div>
         </div>
         
         <div class="col-md-4">
@@ -33,10 +80,24 @@
         name:"Barber",
         data(){
             return {
-                barbers:""
+              barbers:"",
+              modal: false,
+              update: false
             }
         },
         methods:{
+          open_modal: function() {
+            this.modal = true;
+          },
+          close_modal: function() {
+            this.modal = false;
+          },
+          open_update: function() {
+            this.update = true;
+          },
+          close_update: function() {
+            this.update = false;
+          },
         },
         beforeMount(){
             fetch('https://stormwalker.herokuapp.com/get_barbers.php', {

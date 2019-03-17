@@ -74,13 +74,28 @@ export default {
   h1 h2 h3 h4 h5 h6 {
     letter-spacing: 2px;
   }
+  #navi {
+    padding: 10px 0 20px 0;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    /* text-align: right; */
+  }
+  #navi a {
+    color: #fff;
+  }
+
+  #navir a.router-link-exact-active {
+    color: #fff;
+  }
 /* Form Style */
   .col-md-6 {
     padding-left: 0%;
     padding-right: 0%;
   }
   .title-box {
-    background-color:dimgray;
+    background-image: url(assets/imgs/barbershop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     justify-content: center;
     display: flex;
@@ -321,6 +336,7 @@ export default {
 /* Modal */
   .modal-form {
     position: fixed;
+    z-index: 3;
     width: 400px;
     margin: auto;
     top: 5%;
@@ -358,6 +374,7 @@ export default {
   }
   .confirm-box {
     position: fixed;
+    z-index: 3;
     background-color: rgba(0,0,0,0.5);
     width: 100vw;
     height: 100vh;
