@@ -141,6 +141,7 @@
             return response.json();
           }).then((json)=>{
             if(json){
+              alert("Appointment Deleted Successfuly");
               location.reload();
             }
         });
