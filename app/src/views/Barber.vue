@@ -26,12 +26,12 @@
                     <div class="modal-group">
                       <label for="name">FIRST NAME</label>
                       <br/>
-                      <input type="text" name="f_name" id="f_name" class="modal-input">
+                      <input type="text" name="f_name" id="f_name" class="modal-input" v-model="f_name">
                     </div>
                     <div class="modal-group">
                       <label for="l_name">LAST NAME</label>
                       <br/>
-                      <input type="text" name="l_name" id="l_name" class="modal-input">
+                      <input type="text" name="l_name" id="l_name" class="modal-input" v-model="l_name">
                     </div>
                     <div class="modal-group">
                       <label for="description">DESCRIPTION</label>
@@ -44,7 +44,7 @@
                       </div>
                     </form>
                     <div class="buttom-box">
-                      <button class="modal-button">UPDATE</button>
+                      <button class="modal-button" @click="Update(b.barber_id)">UPDATE</button>
                     </div>
                   </div>
                   <button @click="close_update" class="modal-button">CLOSE</button>
@@ -82,7 +82,10 @@
             return {
               barbers:"",
               modal: false,
-              update: false
+              update: false,
+              f_name:"",
+              l_name:"",
+              description:""
             }
         },
         methods:{
@@ -109,9 +112,29 @@
               return response.json();
             }).then((json)=>{
               if(json){
+                alert("Barber Deleted Successfuly");
                 location.reload();
               }
             });
+          },
+          Update: function(barber_id) {
+            var fd = new FormData();
+            fd.append("barber_id", barber_id);
+            fd.append("f_name", this.f_name);
+            fd.append("l_name", this.l_name);
+            fd.append("description", this.description);
+            
+            fetch('https://stormwalker.herokuapp.com/update_barber.php', {
+              method:"POST",
+              body:fd,
+            }).then((response)=>{
+              return response.json();
+            }).then((json)=>{
+              if(json){
+                alert("Barber Updated Successfuly");
+                location.reload();
+              }
+            }); 
           }
         },
         beforeMount(){
