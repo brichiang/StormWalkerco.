@@ -66,12 +66,12 @@
                         if(json.length == 0 || "" || null){
                           alert("Incorrect email/password, please try again");
                         } else {
-                          alert("Loged In Successfuly");
+                          alert("Loged In as Barber");
                         }
                       });
                       
                     } else {
-                      alert("Loged In Successfuly");
+                      alert("Loged In as User");
                     } 
                   
                   });
