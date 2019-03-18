@@ -10,11 +10,9 @@
         <div class="schedule-box">
           <img src="@/assets/imgs/profile1.jpg" class="profile-pic"/>
           <div class="information">
-            <h3 v-if="a.barber_id === '1'">Brian</h3>
-            <h3 v-if="a.barber_id === '2'">Matei</h3>
-            <h3 v-if="a.barber_id === '3'">Bryan</h3>
+            <h3>{{a.barber_name}}</h3>
             <p><span>Date: </span>{{a.date}}</p>
-             <p><span>Time: </span>{{a.time}}</p>
+            <p><span>Time: </span>{{a.time}}</p>
           </div>
             <button class="schedule-but" @click="open_form">RESCHEDULE</button>
             <button class="schedule-but" @click="open_modal">DELETE APPOINTMENT</button>

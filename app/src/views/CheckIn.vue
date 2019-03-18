@@ -101,7 +101,8 @@
                 image:"",
                 barber_name:"",
                 appointments:"",
-                barbers:""
+                barbers:"",
+                userName:""
             }
         },
         methods:{
@@ -113,6 +114,7 @@
                 fd.append("description", this.description);
                 fd.append("image", this.image);
                 fd.append("barber_name", this.barber_name);
+                fd.append("user_name", this.userName)
                 
                 fetch('https://stormwalker.herokuapp.com/insert_appointment.php', {
                     method:"POST",
@@ -146,6 +148,7 @@
                     this.barbers = json;
                 }
             });
+            this.userName = localStorage.userName;
         }
     }
 </script>
