@@ -6,8 +6,8 @@
           <div class="title">STYLE STARTS <strong>HERE.</strong></div>
         </div>
         <div id="button-box">
-          <router-link to="/check_in" class="button">Check In</router-link>
-          <router-link to="/user" class="button">Sign up</router-link>
+          <button class="button" @click="checkIn">Check In</button>
+          <button class="button" @click="signUp">Sign up</button>
         </div>
       </div>
     </div>
@@ -41,6 +41,18 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods: {
+    checkIn: function(){
+      if(localStorage.isLogin === ""){
+        window.location.href = "/Login";
+      } else {
+        window.location.href = "/check_in";
+      }
+    },
+    signUp: function(){
+      window.location.href = "/user";
+    }
   }
 }
 </script>

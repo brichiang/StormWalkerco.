@@ -252,6 +252,9 @@ export default {
   .profile {
     margin-bottom: 10%;
   }
+  .barberImg {
+    margin-bottom: 10px;
+  }
 /*End Barber Style*/
 /*Contact Style */
   #contact {

@@ -9,10 +9,11 @@
         <div class="col-md-4" v-for="b in barbers">
           <div class="profile">
             <a href="check_in">
-              <img src="@/assets/imgs/profile.gif" width="100%">
+              <img src="@/assets/imgs/profile.gif" width="100%" class="barberImg">
             </a>
             <h4>{{b.f_name}} {{b.l_name}}</h4>
             <p>{{b.description}}</p>
+            
             <div>
               <button class="schedule-but" @click="open_update(b.barber_id)" >UPDATE</button>
               <button class="schedule-but" @click="open_modal(b.barber_id)">DELETE</button>
