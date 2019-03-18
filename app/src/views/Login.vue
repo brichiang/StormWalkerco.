@@ -70,6 +70,7 @@
                         } else {
                           localStorage.isUser= "no";
                           localStorage.isLogin= "yes";
+                          localStorage.barberName= json[0].f_name;
                           window.location.href = "/myaccount";
                         }
                       });
@@ -77,6 +78,7 @@
                     } else {
                       localStorage.isUser= "yes";
                       localStorage.isLogin= "yes";
+                      localStorage.userName= json[0].f_name;
                       window.location.href = "/myaccount";
                     } 
                   

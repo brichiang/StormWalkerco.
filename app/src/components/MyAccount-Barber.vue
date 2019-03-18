@@ -1,7 +1,7 @@
 <template>
   <div class="account">
       <div class="account-header">
-        <h1>HELLO BARBER</h1>
+        <h1>HELLO {{ barberName }}</h1>
         <h4>VIEW SCHEDULE</h4>
       </div>
       <div class="schedule">
@@ -30,7 +30,8 @@
     data(){
       return {
         appointments:"",
-        name:""
+        name:"",
+        barberName:""
       }
     },
     methods:{
@@ -53,6 +54,7 @@
           this.appointments = json;
         }
       });
+      this.barberName = localStorage.barberName;
     }
   }
 </script>

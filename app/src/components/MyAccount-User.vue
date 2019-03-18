@@ -1,7 +1,7 @@
 <template>
   <div class="account">
     <div class="account-header">
-       <h1>HELLO (User Name)</h1>
+       <h1>HELLO {{ userName }}</h1>
        <h4>VIEW/RESCHEDULE</h4>
     </div>
     <div class="schedule">
@@ -117,7 +117,8 @@
         barber:"",
         date:"",
         time:"",
-        description:""
+        description:"",
+        userName:""
       }
     },
     methods :{
@@ -187,6 +188,7 @@
           this.appointments = json;
         }
       });
+      this.userName=localStorage.userName;
     }
   }
   
