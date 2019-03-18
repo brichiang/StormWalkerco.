@@ -27,17 +27,17 @@
                     <div class="modal-group">
                       <label for="name">FIRST NAME</label>
                       <br/>
-                      <input type="text" name="f_name" id="f_name" class="modal-input" v-model="f_name">
+                      <input type="text" name="f_name" id="f_name" class="modal-input" v-model="f_name" required>
                     </div>
                     <div class="modal-group">
                       <label for="l_name">LAST NAME</label>
                       <br/>
-                      <input type="text" name="l_name" id="l_name" class="modal-input" v-model="l_name">
+                      <input type="text" name="l_name" id="l_name" class="modal-input" v-model="l_name" required>
                     </div>
                     <div class="modal-group">
                       <label for="description">DESCRIPTION</label>
                       <br/>
-                      <textarea name="description" id="description" class="form-control" rows="5" v-model="description"></textarea>
+                      <textarea name="description" id="description" class="form-control" rows="5" v-model="description" required></textarea>
                     </div>
                       <div class="modal-group">
                         <label for="image">PROFILE</label><br/>
