@@ -17,9 +17,7 @@
                 <th>TIME</th>
               </tr>
               <tr v-for="a in appointments">
-                <td v-if="a.barber_id === '1'">Brian</td>
-                <td v-else-if="a.barber_id === '2'">Matei</td>
-                <td v-else-if="a.barber_id === '3'">Bryan</td>
+                <td>{{a.barber_name}}</td>
                 <td>{{a.date}}</td>
                 <td>{{a.time}}</td>
               </tr>
@@ -36,8 +34,8 @@
                 <label for="barber">BARBER</label>
                 <br/>
                 <div class="form-input">
-                  <select name="barber" id="barber" class="select-box" v-model="barber_id" >
-                    <option value="" v-for="b in barbers">{{b.f_name}}</option>
+                  <select name="barber" id="barber" class="select-box" v-model="barber_name" >
+                    <option :value="b.f_name" v-for="b in barbers">{{b.f_name}}</option>
                   </select>
                 </div>
               </div>
@@ -101,7 +99,7 @@
                 time:"",
                 description:"",
                 image:"",
-                barber_id:"",
+                barber_name:"",
                 appointments:"",
                 barbers:""
             }
@@ -114,13 +112,7 @@
                 fd.append("time", this.time);
                 fd.append("description", this.description);
                 fd.append("image", this.image);
-                if (this.barber_id === "Brian"){
-                    fd.append("barber_id", 1);
-                } if (this.barber_id === "Matei"){
-                      fd.append("barber_id", 2);
-                  } if (this.barber_id === "Bryan"){
-                        fd.append("barber_id", 3);
-                    }
+                fd.append("barber_name", this.barber_name);
                 
                 fetch('https://stormwalker.herokuapp.com/insert_appointment.php', {
                     method:"POST",
