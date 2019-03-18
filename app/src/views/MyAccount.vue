@@ -4,8 +4,8 @@
       <div class="header-title">YOUR APPOINTMENT</div>
     </div>
     <div class="container">
-      <accountUser />
-      <accountBarber />
+      <accountUser v-if="account == true"/>
+      <accountBarber v-if="account == false"/>
     </div>
   </div>
 </template>
@@ -19,6 +19,20 @@ export default {
   components: {
     accountBarber,
     accountUser
+  },
+  data(){
+    return {
+      account:false,
+    }
+  },
+  beforeMount(){
+      if(localStorage.isUser === "yes"){
+        this.account = true;
+      } else {
+        this.account = false;
+      }
+  },
+  methods:{
   }
 }
 </script>

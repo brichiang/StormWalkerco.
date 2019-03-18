@@ -98,6 +98,9 @@
        </div>
       
     </div>
+    <div class="logout-but">
+      <button class="schedule-but" @click="logout">LOGOUT</button>
+    </div>
   </div>
 </template>
 
@@ -129,6 +132,10 @@
       },
       close_modal: function() {
         this.modal = false;
+      },
+      logout: function() {
+        localStorage.isLogin="";
+        window.location.href = "/Login";
       },
       Delete: function(appointment_id) {
         var fd = new FormData();

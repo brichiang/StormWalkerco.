@@ -15,8 +15,8 @@
             <mdb-nav-item href="/barber" waves-fixed>BARBERS</mdb-nav-item>
             <mdb-nav-item href="/Services" waves-fixed>SERVICES</mdb-nav-item>
             <mdb-nav-item href="/Contact" waves-fixed>CONTACT</mdb-nav-item>
-            <mdb-nav-item href="/Login" waves-fixed>LOGIN</mdb-nav-item>
-            <mdb-nav-item href="/myaccount" waves-fixed>My Account</mdb-nav-item>
+            <mdb-nav-item href="/Login" waves-fixed v-if="login == false">LOGIN</mdb-nav-item>
+            <mdb-nav-item href="/myaccount" waves-fixed v-if="login == true">My Account</mdb-nav-item>
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>
@@ -40,7 +40,19 @@ export default {
     mdbInput,
     mdbNavbarBrand,
     mdbIcon
-  }
+  },
+  data(){
+    return {
+      login:false,
+    }
+  },
+  beforeMount(){
+    if(localStorage.isLogin === "yes"){
+        this.login = true;
+      } else {
+        this.login = false;
+      }
+  },
 };
 </script>
 

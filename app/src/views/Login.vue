@@ -38,7 +38,9 @@
         data(){
             return {
                 email:"",
-                password:""
+                password:"",
+                isUser:"",
+                isLogin:""
             }
         },
         methods:{
@@ -66,12 +68,16 @@
                         if(json.length == 0 || "" || null){
                           alert("Incorrect email/password, please try again");
                         } else {
-                          alert("Loged In as Barber");
+                          localStorage.isUser= "no";
+                          localStorage.isLogin= "yes";
+                          window.location.href = "/myaccount";
                         }
                       });
                       
                     } else {
-                      alert("Loged In as User");
+                      localStorage.isUser= "yes";
+                      localStorage.isLogin= "yes";
+                      window.location.href = "/myaccount";
                     } 
                   
                   });

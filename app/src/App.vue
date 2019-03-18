@@ -160,7 +160,9 @@ export default {
 /* End Form Style */
 /* Appointment Style */
   .appoint-box {
-    background-color:dimgray;
+    background-image: url(assets/imgs/barbershop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding:10% 15% 10% 15%;
     height:100%;
     justify-content: center;
@@ -331,6 +333,10 @@ export default {
   .information {
     margin: 20px;
     height: 150px;
+  }
+  .logout-but {
+    width: 100%;
+    text-align: center;
   }
 /*End Account Style*/
 /* Modal */

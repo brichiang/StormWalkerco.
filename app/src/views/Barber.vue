@@ -14,7 +14,7 @@
             <h4>{{b.f_name}} {{b.l_name}}</h4>
             <p>{{b.description}}</p>
             <div>
-              <button class="schedule-but" @click="open_update(b.barber_id)">UPDATE</button>
+              <button class="schedule-but" @click="open_update(b.barber_id)" >UPDATE</button>
               <button class="schedule-but" @click="open_modal(b.barber_id)">DELETE</button>
             </div>
           
@@ -64,7 +64,7 @@
           </div>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4" v-if="this.account == false">
           <div class="profile">
             <a href="barber_setup">
               <img src="@/assets/imgs/SVG/add.svg" width="100%">
@@ -88,7 +88,8 @@
               barber_id:"",
               f_name:"",
               l_name:"",
-              description:""
+              description:"",
+              account:false
             }
         },
         methods:{
@@ -143,7 +144,7 @@
           }
         },
         beforeMount(){
-            fetch('https://stormwalker.herokuapp.com/get_barbers.php', {
+          fetch('https://stormwalker.herokuapp.com/get_barbers.php', {
                 method:"POST"
             }).then((response)=>{
                 return response.json();
@@ -152,6 +153,11 @@
                     this.barbers = json;
                 }
             });
+          if(localStorage.isUser === "yes"){
+            this.account = true;
+          } else {
+            this.account = false;
+          }
         }
     }
 </script>

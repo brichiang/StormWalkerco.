@@ -18,6 +18,9 @@
           </div>
         </div>
       </div>
+      <div class="logout-but">
+        <button class="schedule-but" @click="logout">LOGOUT</button>
+      </div>
     </div>
 </template>
 
@@ -29,6 +32,12 @@
         appointments:"",
         name:""
       }
+    },
+    methods:{
+      logout: function() {
+        localStorage.isLogin="";
+        window.location.href = "/Login";
+      },
     },
     beforeMount(){
      
