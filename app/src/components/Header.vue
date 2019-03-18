@@ -6,7 +6,7 @@
         <!-- Navbar brand -->
         <mdb-navbar-brand id="logo">
           <a href="/">
-            <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="250px;">
+            <img src="@/assets/imgs/Logo/StormWalkerLogo_Black.png" width="230px;">
           </a>
         </mdb-navbar-brand>
         <mdb-navbar-toggler>

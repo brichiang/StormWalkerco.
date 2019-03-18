@@ -81,7 +81,7 @@
                 }).then((json)=>{
                     if(json){
                         alert("Account Created Successfuly");
-                        location.reload();
+                        window.location.href = "/barber";
                     }
                 });
             }
