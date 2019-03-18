@@ -6,7 +6,7 @@
       </div>
       <div class="schedule">
         
-        <div class="schedule-frame" v-for="a in appointments">
+        <div class="schedule-frame" v-for="a in appointments" v-if="a.barber_name === barberName">
           <div class="schedule-box">
             <img src="@/assets/imgs/profile.gif" class="profile-pic"/>
             <div class="information">
