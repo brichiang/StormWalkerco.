@@ -127,6 +127,7 @@
                       location.reload();
                     }
                 });
+                localStorage.barberSelected = "";
             }
         },
         beforeMount(){

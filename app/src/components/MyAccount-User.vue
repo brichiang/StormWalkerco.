@@ -26,11 +26,8 @@
                       <label for="barber">BARBER</label>
                       <br/>
                       <div class="modal-input">
-                        <select name="barber" id="barber" class="select-box" v-model="barber">
-                          <option value=""></option>
-                          <option value="1">BRIAN</option>
-                          <option value="2">MATEI</option>
-                          <option value="3">BRYAN</option>
+                        <select name="barber" id="barber" class="select-box" v-model="barber_name" >
+                          <option :value="b.f_name" v-for="b in barbers">{{b.f_name}}</option>
                         </select>
                       </div>
                     </div>
@@ -112,11 +109,12 @@
         name:"",
         form: false,
         modal: false,
-        barber:"",
+        barber_name:"",
         date:"",
         time:"",
         description:"",
-        userName:""
+        userName:"",
+        barbers:""
       }
     },
     methods :{
@@ -155,10 +153,11 @@
       Update: function(appointment_id) {
         var fd = new FormData();
         fd.append("appointment_id", appointment_id);
-        fd.append("barber_id", this.barber);
+        fd.append("barber_name", this.barber_name);
         fd.append("date", this.date);
         fd.append("time", this.time);
         fd.append("description", this.description);
+        fd.append("user_name", this.userName);
         
         fetch('https://stormwalker.herokuapp.com/update_appointment.php', {
           method:"POST",
@@ -186,7 +185,16 @@
           this.appointments = json;
         }
       });
-      this.userName=localStorage.userName;
+      fetch('https://stormwalker.herokuapp.com/get_barbers.php', {
+        method:"POST"
+      }).then((response)=>{
+        return response.json();
+      }).then((json)=>{
+        if(json){
+          this.barbers = json;
+        }
+      });
+      this.userName = localStorage.userName;
     }
   }
   

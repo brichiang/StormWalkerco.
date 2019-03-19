@@ -8,7 +8,7 @@
         
         <div class="col-md-4" v-for="b in barbers">
           <div class="profile">
-            <a href="check_in">
+            <a href="check_in" @click="StoreName(b.barber_name)">
               <img src="@/assets/imgs/profile.gif" width="100%" class="barberImg">
             </a>
             <h4>{{b.f_name}} {{b.l_name}}</h4>
@@ -142,6 +142,9 @@
                 location.reload();
               }
             }); 
+          },
+          StoreName: function(barber_name) {
+            localStorage.barberSelected === barber_name;
           }
         },
         beforeMount(){
