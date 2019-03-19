@@ -127,7 +127,7 @@
                       location.reload();
                     }
                 });
-                localStorage.barberSelected = "";
+                sessionStorage.setItem("barberSelected" , "");
             }
         },
         beforeMount(){
@@ -149,7 +149,7 @@
                     this.barbers = json;
                 }
             });
-            this.userName = localStorage.userName;
+            this.userName = sessionStorage.getItem("userName");
         }
     }
 </script>

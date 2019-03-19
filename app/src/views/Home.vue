@@ -6,7 +6,7 @@
           <div class="title">STYLE STARTS <strong>HERE.</strong></div>
         </div>
         <div id="button-box">
-          <button class="button" @click="checkIn" v-if="barberLog == true">CHECK IN</button>
+          <button class="button" @click="checkIn">CHECK IN</button>
           <button class="button" @click="signUp">SIGN UP</button>
         </div>
       </div>
@@ -49,22 +49,15 @@ export default {
   },
   methods: {
     checkIn: function(){
-      if(localStorage.isLogin === ""){
+      if(sessionStorage.getItem("isLogin") === "yes"){
+        window.location.href = "/check_in";
+      } else {
         window.location.href = "/Login";
         alert("Please Login");
-      } else {
-        window.location.href = "/check_in";
       }
     },
     signUp: function(){
       window.location.href = "/user";
-    }
-  },
-  beforeMount(){
-    if(localStorage.isUser === "yes"){
-      this.barberLog = true;
-    } else {
-      this.barberLog = false;
     }
   }
 }

@@ -131,7 +131,7 @@
         this.modal = false;
       },
       logout: function() {
-        localStorage.isLogin="";
+        sessionStorage.setItem("isLogin","");
         window.location.href = "/Login";
       },
       Delete: function(appointment_id) {
@@ -194,7 +194,7 @@
           this.barbers = json;
         }
       });
-      this.userName = localStorage.userName;
+      this.userName = sessionStorage.getItem("userName");
     }
   }
   

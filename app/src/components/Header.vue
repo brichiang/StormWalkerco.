@@ -47,7 +47,7 @@ export default {
     }
   },
   beforeMount(){
-    if(localStorage.isLogin === "yes"){
+    if(sessionStorage.getItem("isLogin") === "yes"){
         this.login = true;
       } else {
         this.login = false;

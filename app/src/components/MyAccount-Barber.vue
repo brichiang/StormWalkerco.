@@ -36,7 +36,7 @@
     },
     methods:{
       logout: function() {
-        localStorage.isLogin="";
+        sessionStorage.setItem("isLogin","");
         window.location.href = "/Login";
       },
     },
@@ -54,7 +54,7 @@
           this.appointments = json;
         }
       });
-      this.barberName = localStorage.barberName;
+      this.barberName = sessionStorage.getItem("barberName");
     }
   }
 </script>

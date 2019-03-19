@@ -68,17 +68,21 @@
                         if(json.length == 0 || "" || null){
                           alert("Incorrect email/password, please try again");
                         } else {
-                          localStorage.isUser= "no";
-                          localStorage.isLogin= "yes";
-                          localStorage.barberName= json[0].f_name;
+                          sessionStorage.setItem("isUser", "no");
+                          sessionStorage.setItem("isLogin", "yes");
+                          sessionStorage.setItem("barberName", json[0].f_name);
+//                          sessionStorage.isLogin= "yes";
+//                          sessionStorage.barberName= json[0].f_name;
                           window.location.href = "/myaccount";
                         }
                       });
                       
                     } else {
-                      localStorage.isUser= "yes";
-                      localStorage.isLogin= "yes";
-                      localStorage.userName= json[0].f_name;
+                      sessionStorage.setItem("isUser", "yes");
+                      sessionStorage.setItem("isLogin", "yes");
+                      sessionStorage.setItem("userName", json[0].f_name);
+//                      sessionStorage.isLogin= "yes";
+//                      sessionStorage.userName= json[0].f_name;
                       window.location.href = "/myaccount";
                     } 
                   

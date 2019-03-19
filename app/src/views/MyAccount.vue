@@ -23,16 +23,16 @@ export default {
   data(){
     return {
       account:false,
+      isUser:""
     }
   },
   beforeMount(){
-      if(localStorage.isUser === "yes"){
+    //this.isUser = sessionStorage.getItem("isUser");
+      if(sessionStorage.getItem("isUser") === "yes"){
         this.account = true;
       } else {
         this.account = false;
       }
   },
-  methods:{
-  }
 }
 </script>

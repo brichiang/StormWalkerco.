@@ -14,7 +14,7 @@
             <h4>{{b.f_name}} {{b.l_name}}</h4>
             <p>{{b.description}}</p>
             
-            <div>
+            <div v-if="this.account == false">
               <button class="schedule-but" @click="open_update(b.barber_id)" >UPDATE</button>
               <button class="schedule-but" @click="open_modal(b.barber_id)">DELETE</button>
             </div>
@@ -144,7 +144,7 @@
             }); 
           },
           StoreName: function(barber_name) {
-            localStorage.barberSelected === barber_name;
+            sessionStorage.setItem("barberSelected", barber_name);
           }
         },
         beforeMount(){
@@ -157,7 +157,7 @@
                     this.barbers = json;
                 }
             });
-          if(localStorage.isUser === "yes"){
+          if(sessionStorage.getItem("isUser") === "yes"){
             this.account = true;
           } else {
             this.account = false;
