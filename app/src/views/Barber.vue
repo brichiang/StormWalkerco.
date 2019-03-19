@@ -13,8 +13,9 @@
             </a>
             <h4>{{b.f_name}} {{b.l_name}}</h4>
             <p>{{b.description}}</p>
-            
-            <div v-if="this.account == false">
+            <div>
+<!--<div v-if="this.account == false">-->
+<!--idk why not working-->
               <button class="schedule-but" @click="open_update(b.barber_id)" >UPDATE</button>
               <button class="schedule-but" @click="open_modal(b.barber_id)">DELETE</button>
             </div>
