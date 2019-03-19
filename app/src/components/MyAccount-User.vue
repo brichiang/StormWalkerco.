@@ -132,7 +132,7 @@
       },
       logout: function() {
         sessionStorage.setItem("isLogin", "null");
-        window.location.href = "/Login";
+        this.$router.push('/Login');
       },
       Delete: function(appointment_id) {
         var fd = new FormData();

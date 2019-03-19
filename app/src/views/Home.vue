@@ -50,14 +50,15 @@ export default {
   methods: {
     checkIn: function(){
       if(sessionStorage.getItem("isLogin") === "yes"){
-        window.location.href = "/check_in";
+        this.$router.push('/check_in');
+        //window.location.href = "/check_in";
       } else {
-        window.location.href = "/Login";
+        this.$router.push('/Login');
         alert("Please Login");
       }
     },
     signUp: function(){
-      window.location.href = "/user";
+      this.$router.push('/user');
     }
   }
 }

@@ -79,7 +79,7 @@
                 }).then((json)=>{
                     if(json){
                       alert("Account Created Successfuly");
-                      window.location.href = "/Login";
+                      this.$router.push('/Login');
                     }
                 });
             }

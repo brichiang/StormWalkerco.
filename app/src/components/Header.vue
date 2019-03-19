@@ -11,12 +11,12 @@
         </mdb-navbar-brand>
         <mdb-navbar-toggler>
           <mdb-navbar-nav right id="nav">
-            <mdb-nav-item href="/" waves-fixed>HOME</mdb-nav-item>
-            <mdb-nav-item href="/barber" waves-fixed>BARBERS</mdb-nav-item>
-            <mdb-nav-item href="/Services" waves-fixed>SERVICES</mdb-nav-item>
-            <mdb-nav-item href="/Contact" waves-fixed>CONTACT</mdb-nav-item>
-            <mdb-nav-item href="/Login" waves-fixed v-if="login == false">LOGIN</mdb-nav-item>
-            <mdb-nav-item href="/myaccount" waves-fixed v-if="login == true">My Account</mdb-nav-item>
+            <mdb-nav-item to="/" waves-fixed>HOME</mdb-nav-item>
+            <mdb-nav-item to="/barber" waves-fixed>BARBERS</mdb-nav-item>
+            <mdb-nav-item to="/Services" waves-fixed>SERVICES</mdb-nav-item>
+            <mdb-nav-item to="/Contact" waves-fixed>CONTACT</mdb-nav-item>
+            <mdb-nav-item to="/Login" waves-fixed v-if="login == false">LOGIN</mdb-nav-item>
+            <mdb-nav-item to="/myaccount" waves-fixed v-if="login == true">My Account</mdb-nav-item>
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>

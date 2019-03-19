@@ -37,7 +37,7 @@
     methods:{
       logout: function() {
         sessionStorage.setItem("isLogin", "null");
-        window.location.href = "/Login";
+        this.$router.push('/Login');
       },
     },
     beforeMount(){

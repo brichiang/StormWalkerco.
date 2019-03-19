@@ -81,7 +81,7 @@
                 }).then((json)=>{
                     if(json){
                         alert("Account Created Successfuly");
-                        window.location.href = "/barber";
+                        this.$router.push('/barber');
                     }
                 });
             }

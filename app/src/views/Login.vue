@@ -46,7 +46,7 @@
         },
         methods:{
             Signup: function(){
-              window.location.href = "/user"
+              this.$router.push('/user');
             },
             Login: function(){
                 
@@ -75,9 +75,7 @@
                           sessionStorage.setItem("isUser", "no");
                           sessionStorage.setItem("isLogin", "yes");
                           sessionStorage.setItem("barberName", json[0].f_name);
-//                          sessionStorage.isLogin= "yes";
-//                          sessionStorage.barberName= json[0].f_name;
-                          window.location.href = "/myaccount";
+                          this.$router.push('/myaccount');
                         }
                       });
                       
@@ -85,9 +83,7 @@
                       sessionStorage.setItem("isUser", "yes");
                       sessionStorage.setItem("isLogin", "yes");
                       sessionStorage.setItem("userName", json[0].f_name);
-//                      sessionStorage.isLogin= "yes";
-//                      sessionStorage.userName= json[0].f_name;
-                      window.location.href = "/myaccount";
+                      this.$router.push('/myaccount');
                     } 
                   
                   });
