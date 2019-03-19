@@ -156,6 +156,16 @@ export default {
     color: #ffffff;
     background-color: #000000;
     padding: 2% 0 2% 0;
+    margin: 5px;
+  }
+  .form-buttom2 {
+    width: 180px;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    color: #000;
+    background-color: #fff;
+    padding: 2% 0 2% 0;
+    margin: 5px;
   }
 /* End Form Style */
 /* Appointment Style */

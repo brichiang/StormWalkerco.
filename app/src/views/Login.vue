@@ -24,6 +24,7 @@
             </form>
             <div class="buttom-box">
               <button class="form-buttom" @click="Login">LOGIN</button>
+              <button class="form-buttom2" @click="Signup">SIGNUP</button>
             </div>
           </div>
         </div>
@@ -44,6 +45,9 @@
             }
         },
         methods:{
+            Signup: function(){
+              window.location.href = "/user"
+            },
             Login: function(){
                 
                 var fd = new FormData();
