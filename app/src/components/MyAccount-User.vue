@@ -131,7 +131,7 @@
         this.modal = false;
       },
       logout: function() {
-        sessionStorage.setItem("isLogin","");
+        sessionStorage.setItem("isLogin", "null");
         window.location.href = "/Login";
       },
       Delete: function(appointment_id) {

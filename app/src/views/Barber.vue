@@ -157,7 +157,7 @@
                     this.barbers = json;
                 }
             });
-          if(sessionStorage.getItem("isUser") === "yes"){
+          if(sessionStorage.getItem("isUser") === "yes" || sessionStorage.getItem("isUser") === null){
             this.account = true;
           } else {
             this.account = false;
