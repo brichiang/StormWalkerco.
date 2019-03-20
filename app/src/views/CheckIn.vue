@@ -124,7 +124,7 @@
                 }).then((json)=>{
                     if(json){
                       alert("Appointment Created Successfuly");
-                      location.reload();
+                      this.$router.go(this.$router.currentRoute);
                     }
                 });
                 sessionStorage.setItem("barberSelected" , "");

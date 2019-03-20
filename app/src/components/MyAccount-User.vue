@@ -167,7 +167,7 @@
         }).then((json)=>{
           if(json){
             alert("Appointment Updated Successfuly");
-            location.reload();
+            this.$router.go(this.$router.currentRoute);
           }
         }); 
       }

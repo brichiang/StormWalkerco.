@@ -68,7 +68,7 @@
         
         <div class="col-md-4" v-if="this.account == false">
           <div class="profile">
-            <a href="barber_setup">
+            <a href="/barber_setup">
               <img src="@/assets/imgs/SVG/add.svg" width="100%">
             </a>
             <h4>ADD NEW BARBER</h4>
@@ -121,7 +121,7 @@
             }).then((json)=>{
               if(json){
                 alert("Barber Deleted Successfuly");
-                location.reload();
+                this.$router.go(this.$router.currentRoute);
               }
             });
           },
@@ -140,7 +140,7 @@
             }).then((json)=>{
               if(json){
                 alert("Barber Updated Successfuly");
-                location.reload();
+                this.$router.go(this.$router.currentRoute);
               }
             }); 
           },
